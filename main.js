@@ -4,6 +4,8 @@ const tipAmountEl = document.getElementById('tip-amount-el');
 const pBtn = document.querySelectorAll(".pbtn");
 const varBtn = document.getElementById("var-btn");
 const peopleInput = document.getElementById("people-input");
+const cantZero = document.getElementById("cantZero");
+const resetBtn = document.getElementById("reset-btn");
 
 let billWert = 0;
 let prozentWert = 0;
@@ -55,7 +57,17 @@ varBtn.addEventListener("input", (event)=>{
 
 // --- Personen Input ---
 peopleInput.addEventListener("input", ()=>{
+    cantZero.textContent = "";
     persons = Number(peopleInput.value);
-    if (isNaN(persons) || persons <= 0) persons = 1; // Minimum 1 Person
+    if (isNaN(persons) || persons <= 0) {
+        persons = 1;
+        cantZero.textContent ="Can't be zero";
+     } // Minimum 1 Person
     updateDisplay();
 });
+
+// Reset
+
+resetBtn.addEventListener("click", ()=>{
+    location.reload();333
+})
