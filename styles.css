@@ -119,22 +119,17 @@ input:invalid {
     font-weight: 500;
     font-size: 1.1rem;
     color: white;
-    background-color: var(--Green-900);
     padding: 8px 0px;
     border: none;
     border-radius: 5px;
 
 }
 
-.tip-btn button:active {
-    color: black;
-    background-color: rgb(88, 213, 207);
+.pbtn{
+    background-color: var(--Green-900);
 }
 
-.tip-btn button:focus {
-    color: black;
-    background-color: rgb(88, 213, 207);
-}
+
 
 #var-btn {
     display: block;
@@ -256,4 +251,8 @@ h4 {
 #var-btn{
     width: 100%;
 }
+}
+
+.active {
+    background-color: red;
 }
